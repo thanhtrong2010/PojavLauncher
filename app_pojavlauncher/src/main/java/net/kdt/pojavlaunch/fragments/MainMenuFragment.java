@@ -49,6 +49,12 @@ public class MainMenuFragment extends Fragment {
         ImageButton mEditProfileButton = view.findViewById(R.id.edit_profile_button);
         Button mPlayButton = view.findViewById(R.id.play_button);
         mVersionSpinner = view.findViewById(R.id.mc_version_spinner);
+        view.findViewById(R.id.btn_download_mod).setOnClickListener(v -> {
+            String externalModPath = "/sdcard/Minecraft_Mods_Ngoai/";
+            java.io.File targetDir = new java.io.File(externalModPath);
+            if (!targetDir.exists()) targetDir.mkdirs();
+            com.zalithlauncher.modmeta.api.ModMetaApi.showDownloadDialog(getContext(), externalModPath);
+        });
 
         mNewsButton.setOnClickListener(v -> Tools.openURL(requireActivity(), Tools.URL_HOME));
         mDiscordButton.setOnClickListener(v -> Tools.openURL(requireActivity(), getString(R.string.discord_invite)));
