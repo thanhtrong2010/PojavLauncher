@@ -137,6 +137,15 @@
 		android:text="@string/main_play"
 		app:layout_constraintBottom_toBottomOf="parent"
 		/>
-
+Button
+        android:id="@+id/btn_download_mod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tải Mod Trực Tiếp (Zalith API)"
+        android:backgroundTint="#4CAF50" 
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+	
 </androidx.constraintlayout.widget.ConstraintLayout>
 
